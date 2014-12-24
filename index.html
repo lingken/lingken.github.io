@@ -19,17 +19,43 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.responsive.min.css">
 <link rel="stylesheet" type="text/css" href="js/jquery.fancybox.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+
+<link rel='stylesheet' href='css/justifiedgallery.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/swipebox.css' type='text/css' media='screen' />
+<link rel='stylesheet' href='css/colorbox.css' type='text/css' media='screen' />
+
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.masonry.min.js"></script>
 <script src="js/main.js"></script>
-<script type="text/javascript">	
+
+<!-- <script src='js/jquery.min.js'></script> -->
+<script src='js/justifiedgallery.js'></script>
+<script src='js/jquery.swipebox.min.js'></script>
+<script src='js/jquery.colorbox-min.js'></script>
+
+
+<script type="text/javascript"> 
     less = {
         env: "development", // or "production"
         async: true       // load imports async
     };
+</script>
+
+<script>
+$(document).ready(function() {
+$('#remotetest').justifiedGallery({rel: 'gal0'}).on('jg.rowflush', function () {
+    $(this).find('a').colorbox({
+        maxWidth : '100%',
+        maxHeight : '100%',
+        opacity : 0.8,
+        transition : 'elastic',
+        current : ''
+    });
+});
+});
 </script>
 
 <body>
@@ -171,7 +197,37 @@
                 <a href="javascript:void(0)" class="load-more">Load more</a>
                 <div class="slider-navigation"></div>
             </div>
+
+                
+
             </div>
+
+            <div id="remotetest"  style="border: 1px solid black;">
+                <a href="css/images/photogallery/01.jpg" title="Moon">
+                    <img alt="Moon" src="css/images/photogallery/01_s.jpg" />
+                </a>
+                <a href="css/images/photogallery/02.jpg" title="Tsinghua">
+                    <img alt="Tsinghua" src="css/images/photogallery/02_s.jpg" />
+                </a>
+                <a href="css/images/photogallery/03.jpg" title="Sunny bay">
+                    <img alt="Sunny bay" src="css/images/photogallery/03_s.jpg" />
+                </a>
+                <a href="css/images/photogallery/04.jpg" title="">
+                    <img alt="" src="css/images/photogallery/04_s.jpg" />
+                </a>
+                <a href="css/images/photogallery/05.jpg" title="Pillar of the sky">
+                    <img alt="Pillar of the sky" src="css/images/photogallery/05_s.jpg" />
+                </a>
+                <a href="css/images/photogallery/06.jpg" title="Trace of light">
+                    <img alt="Trace of light" src="css/images/photogallery/06_s.jpg" />
+                </a>
+                <a href="css/images/photogallery/07.jpg" title="">
+                    <img alt="" src="css/images/photogallery/07_s.jpg" />
+                </a>
+                <a href="css/images/photogallery/08.jpg" title="Autumn in Tsinghua">
+                    <img alt="Autumn in Tsinghua" src="css/images/photogallery/08_s.jpg" />
+                </a>
+                </div>
 
 <!--             <div class="blog-wrapper" id="portfolio">
                 <div class="blog">
@@ -517,6 +573,7 @@
                         I measured HiWiFi device, the most representative smart router in China. My measurement revealed a flaw in its QoS control function which disturbed the competition balance between TCP and UDP. My discovery elicited a personal reply from the CTO of HiWiFi Company and led to an improvement in their next generation product.<br><br><br>
                         </p>                   
                     </div>
+                    
                     <div class="cleaner"></div>
                 </div>
             </div>
@@ -711,6 +768,35 @@
         </div> -->
 
     </div>
+
+<!--     <div id="remotetest"  style="border: 1px solid black;">
+    <a href="css/images/photogallery/01.jpg" title="Moon">
+        <img alt="Moon" src="css/images/photogallery/01_s.jpg" />
+    </a>
+    <a href="css/images/photogallery/02.jpg" title="Tsinghua">
+        <img alt="Tsinghua" src="css/images/photogallery/02_s.jpg" />
+    </a>
+    <a href="css/images/photogallery/03.jpg" title="Sunny bay">
+        <img alt="Sunny bay" src="css/images/photogallery/03_s.jpg" />
+    </a>
+    <a href="css/images/photogallery/04.jpg" title="">
+        <img alt="" src="css/images/photogallery/04_s.jpg" />
+    </a>
+    <a href="css/images/photogallery/05.jpg" title="Pillar of the sky">
+        <img alt="Pillar of the sky" src="css/images/photogallery/05_s.jpg" />
+    </a>
+    <a href="css/images/photogallery/06.jpg" title="Trace of light">
+        <img alt="Trace of light" src="css/images/photogallery/06_s.jpg" />
+    </a>
+    <a href="css/images/photogallery/07.jpg" title="">
+        <img alt="" src="css/images/photogallery/07_s.jpg" />
+    </a>
+    <a href="css/images/photogallery/08.jpg" title="Autumn in Tsinghua">
+        <img alt="Autumn in Tsinghua" src="css/images/photogallery/08_s.jpg" />
+    </a>
+    </div> -->
+
+
     <!-- #page -->
 <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 </body>
